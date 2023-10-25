@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Defining Colors in CSS</title>
+		<meta charset="utf-8">
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Dane Groves">
+	
+	<link rel="stylesheet" href="Colors%20in%20CSS_files/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="Colors%20in%20CSS_files/notes.css" media="screen">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script async="" src="Colors%20in%20CSS_files/analytics.js"></script><script src="Colors%20in%20CSS_files/prism.js"></script>
+	<script src="Colors%20in%20CSS_files/jquery.min.js"></script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89923459-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<style type="text/css" media="screen">
+		table {font-family: "Menlo", "Consolas", "Monaco", monospace;}
+		img {max-width: 100%;}
+		
+		.demo {overflow: auto; margin-bottom: 1em;}
+		.ex2 .box {font-size: 1em;}
+		.box {
+			border: 1px solid #ddd;
+			width: 100px;
+			height: 100px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: left;
+			width: 19%;
+			font-weight: bold;
+			font-size: 1.25em;
+			color: white;
+			
+		}
+		
+		.s100 { background-color: hsl(240, 100%, 50%); }
+		.s75 { background-color: hsl(240, 75%, 50%); }
+		.s50 { background-color: hsl(240, 50%, 50%); }
+		.s25 { background-color: hsl(240, 25%, 50%); }
+		.s0 { background-color: hsl(240, 0%, 50%); }
+
+		.l100 { background-color: hsl(240, 100%, 100%); color: black;}
+		.l75 { background-color: hsl(240, 100%, 75%); }
+		.l50 { background-color: hsl(240, 100%, 50%); }
+		.l25 { background-color: hsl(240, 100%, 25%); }
+		.l0 { background-color: hsl(240, 100%, 0%); }
+
+		.s100.l90 { background-color: hsl(240, 100%, 90%); color: black;}
+		.s100.l75 { background-color: hsl(240, 100%, 75%); }
+		.s100.l50 { background-color: hsl(240, 100%, 50%); }
+		.s100.l25 { background-color: hsl(240, 100%, 25%); }
+		.s100.l10 { background-color: hsl(240, 100%, 10%); }
+
+		.s75.l90 { background-color: hsl(240, 75%, 90%); color: black;}
+		.s75.l75 { background-color: hsl(240, 75%, 75%); }
+		.s75.l50 { background-color: hsl(240, 75%, 50%); }
+		.s75.l25 { background-color: hsl(240, 75%, 25%); }
+		.s75.l10 { background-color: hsl(240, 75%, 10%); }
+
+		.s50.l90 { background-color: hsl(240, 50%, 90%); color: black;}
+		.s50.l75 { background-color: hsl(240, 50%, 75%); }
+		.s50.l50 { background-color: hsl(240, 50%, 50%); }
+		.s50.l25 { background-color: hsl(240, 50%, 25%); }
+		.s50.l10 { background-color: hsl(240, 50%, 10%); }
+
+		.s25.l90 { background-color: hsl(240, 25%, 90%); color: black;}
+		.s25.l75 { background-color: hsl(240, 25%, 75%); }
+		.s25.l50 { background-color: hsl(240, 25%, 50%); }
+		.s25.l25 { background-color: hsl(240, 25%, 25%); }
+		.s25.l10 { background-color: hsl(240, 25%, 10%); }
+
+		.s0.l90 { background-color: hsl(240, 0%, 90%); color: black;}
+		.s0.l75 { background-color: hsl(240, 0%, 75%); }
+		.s0.l50 { background-color: hsl(240, 0%, 50%); }
+		.s0.l25 { background-color: hsl(240, 0%, 25%); }
+		.s0.l10 { background-color: hsl(240, 0%, 10%); }
+		
+		.ex3 {
+			background-color: hsl(100, 100%, 50%);
+		}
+		.demo h1 {background-color: hsla(240, 25%, 50%, .8);}
+
+	</style>
+</head>
+
+
+<body id="css-colors">
+		<p class="backlink"><a href="http://web.simmons.edu/~grovesd/comm244/week3">Back to Week 3 page »</a></p>
+
+
+<h1>Defining Colors in CSS</h1>
+
+<p>We've already seen some properties in CSS that take color values. Here's an example:</p>
+
+<pre class=" language-css"><code class=" language-css"><span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>There are several different ways to specify colors in CSS.</p>
+
+<ul>
+	<li><a href="#keywords">Color Keywords</a></li>
+	<li><a href="#rgb">RGB</a></li>
+	<li><a href="#rgba">RGBA</a></li>
+	<li><a href="#hsl">HSL</a></li>
+	<li><a href="#hsla">HSLA</a></li>
+	<li><a href="#hex">Hexadecimal</a></li>
+</ul>
+
+
+
+
+<h2 id="keywords">Color Keywords</h2>
+<p>The first and easiest way to specify a color is using one of the 140 predefined color <dfn>keywords</dfn> specified in CSS.</p>
+<p>The original 17 are listed below. An unsightly bunch...</p>
+
+<table>
+	<tbody><tr>
+		<th>Color</th>
+		<th>Keyword</th>
+		<th>Hex Value</th>
+	</tr>
+	<tr>
+		<td style="background-color:black;">&nbsp;</td>
+		<td>black</td>
+		<td>#000000</td>
+	</tr>
+	<tr>
+		<td style="background-color:gray;">&nbsp;</td>
+		<td>gray</td>
+		<td>#808080</td>
+	</tr>
+	<tr>
+		<td style="background-color:silver;">&nbsp;</td>
+		<td>silver</td>
+		<td>#c0c0c0</td>
+	</tr>
+	<tr>
+		<td style="background-color:white;">&nbsp;</td>
+		<td>white</td>
+		<td>#ffffff</td>
+	</tr>
+	<tr>
+		<td style="background-color:maroon;">&nbsp;</td>
+		<td>maroon</td>
+		<td>#800000</td>
+	</tr>
+	<tr>
+		<td style="background-color:red;">&nbsp;</td>
+		<td>red</td>
+		<td>#ff0000</td>
+	</tr>
+	<tr>
+		<td style="background-color:purple;">&nbsp;</td>
+		<td>purple</td>
+		<td>#800080</td>
+	</tr>
+	<tr>
+		<td style="background-color:fuchsia;">&nbsp;</td>
+		<td>fuchsia</td>
+		<td>#ff00ff</td>
+	</tr>
+	<tr>
+		<td style="background-color:green;">&nbsp;</td>
+		<td>green</td>
+		<td>#008000</td>
+	</tr>
+</tbody></table>
+
+<table>
+	<tbody><tr>
+		<th>Color</th>
+		<th>Keyword</th>
+		<th>Hex Value</th>
+	</tr>
+	<tr>
+		<td style="background-color:lime;">&nbsp;</td>
+		<td>lime</td>
+		<td>#00ff00</td>
+	</tr>
+	<tr>
+		<td style="background-color:olive;">&nbsp;</td>
+		<td>olive</td>
+		<td>#808000</td>
+	</tr>
+	<tr>
+		<td style="background-color:yellow;">&nbsp;</td>
+		<td>yellow</td>
+		<td>#ffff00</td>
+	</tr>
+	<tr>
+		<td style="background-color:navy;">&nbsp;</td>
+		<td>navy</td>
+		<td>#000080</td>
+	</tr>
+	<tr>
+		<td style="background-color:blue;">&nbsp;</td>
+		<td>blue</td>
+		<td>#0000ff</td>
+	</tr>
+	<tr>
+		<td style="background-color:teal;">&nbsp;</td>
+		<td>teal</td>
+		<td>#008080</td>
+	</tr>
+	<tr>
+		<td style="background-color:aqua;">&nbsp;</td>
+		<td>aqua</td>
+		<td>#0000ff</td>
+	</tr>
+	<tr>
+		<td style="background-color:orange;">&nbsp;</td>
+		<td>orange</td>
+		<td>#ffa500</td>
+	</tr>
+</tbody></table>
+
+<p class="clear"><br>Clearly most of these colors are unsuitable for 
+normal web design. Color keywords are most useful for testing and 
+demonstration purposes (like in these pages).</p>
+
+<p>All <a href="http://web.simmons.edu/~grovesd/comm244/notes/week3/css3-color-names">140 color keywords</a> are listed here in alphabetical order. You can also find more helpful listings at these sites:</p>
+<ul>
+	<li><a href="http://www.colors.commutercreative.com/grid/" title="147 Colors | CSS Color Names">147 Colors</a></li>
+	<li><a href="https://htmlcolorcodes.com/color-names/" title="Color Names — HTML Color Codes">HTML Color Codes: Color Names</a></li>
+</ul>
+
+<p>You can also view a printout of all the swatches on pages 304-305 in <i>Learning Web Design</i>.</p>
+
+
+<h2 id="rgb" class="clear">RGB Color Values</h2>
+<p>Most of you have probably heard about CMYK values for print design. 
+RGB, which stands for red, green, and blue is the color model that 
+monitors use. Since in web design we're primarily concerned with what 
+web pages look like on screens, RGB is the color model we use.</p>
+
+<ul>
+	<li>RGB colors have three values that represent: <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong></li>
+	<li>Each value can be a number between <code>0</code> and <code>255</code> or a percentage from <code>0</code> to <code>100%</code></li>
+	<li>A value of <code>0</code> means none of that color is being used</li>
+	<li>A value of <code>255</code> or <code>100%</code> means all of that color is being used</li>
+	<li>A <code>0</code> for all three color values will be black</li>
+	<li>A <code>255</code> or <code>100%</code> for all three color values will be white</li>
+</ul>
+
+
+<p>The CSS syntax for using RGB colors is a little different than we've seen before. In the example below, we are styling:</p>
+<ul>
+	<li>A black paragraph</li>
+	<li>A white h1</li>
+	<li>A purple unordered list</li>
+</ul>
+
+
+<pre class=" language-css"><code class=" language-css"><span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span>(0, 0, 0)<span class="token punctuation">;</span> <span class="token punctuation">}</span>              <span class="token comment" spellcheck="true">/* black */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span>(255, 255, 255)<span class="token punctuation">;</span> <span class="token punctuation">}</span>       <span class="token comment" spellcheck="true">/* white */</span>
+<span class="token selector">ul </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span>(128, 80, 200)<span class="token punctuation">;</span> <span class="token punctuation">}</span>        <span class="token comment" spellcheck="true">/* purple */</span>
+
+<span class="token comment" spellcheck="true">/* Percentages work too */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span>(100%, 100%, 100%)<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* white */</span></code></pre>
+
+
+<h2 id="rgba" class="clear">RGBA Color Values</h2>
+<p>RGBA is all the rage.</p>
+
+<p>Seriously though, it's just like RGB, except with the addition of a fourth value: the <dfn>alpha channel</dfn>.</p>
+
+<p>The alpha value represents the level of transparency that the rgb color should have. It can be a value from <code>0</code> to <code>1</code> or a percentage from <code>0</code> to <code>100%</code>. <em>Note that you must specify <code>RGBA</code> instead of <code>RGB</code>.</em></p>
+
+<ul><li><a href="http://web.simmons.edu/~grovesd/comm244/notes/week3/rgba-example">See RGBA example</a></li></ul>
+
+
+
+<h2 id="hsl">HSL</h2>
+<p>The HSL color model is one of the least used, but gaining traction 
+because can be more intuitive to use when working with shades and color 
+adjustments.</p>
+
+<p>HSL stands for: hue, saturation, and lightness</p>
+
+<h3>Hue</h3>
+<p><img src="Colors%20in%20CSS_files/color_wheel.jpg" alt="A picture of the HSL color wheel" width="75%"></p>
+<p>Hue is defined by a color wheel. Each color represents a degree on 
+the wheel. This page shows a nice visual animation of the color wheel:</p>
+
+<ul><li><a href="http://itpastorn.github.io/webbteknik/future-stuff/svg/color-wheel.html" title="HSL Color wheel demo">HSL Color wheel demo</a></li></ul>
+
+
+
+<h3>Saturation</h3>
+<p>The boxes below demonstrate varying levels of saturation (color 
+intensity) for the hue at 240°. The lightness value is set at 50% for 
+each box.</p>
+
+<div class="demo">
+	<div class="box s100">100%</div>
+	<div class="box s75">75%</div>
+	<div class="box s50">50%</div>
+	<div class="box s25">25%</div>
+	<div class="box s0">0%</div>
+</div>
+
+
+<h3>Lightness</h3>
+<p>Here's the same hue (240°) shown at various lightness levels with 100% saturation.</p>
+
+<div class="demo">
+	<div class="box l100">100%</div>
+	<div class="box l75">75%</div>
+	<div class="box l50">50%</div>
+	<div class="box l25">25%</div>
+	<div class="box l0">0%</div>
+</div>
+
+
+<h3>HSL Color Grid Example</h3>
+<p>This grid shows varying saturation and lightness together.</p>
+
+<div class="demo ex2">
+	<div class="box s100 l90">hsl(240, 100%, 90%)</div>
+	<div class="box s100 l75">hsl(240, 100%, 75%)</div>
+	<div class="box s100 l50">hsl(240, 100%, 50%)</div>
+	<div class="box s100 l25">hsl(240, 100%, 25%)</div>
+	<div class="box s100 l10">hsl(240, 100%, 10%)</div>
+
+	<div class="box s75 l90">hsl(240, 75%, 90%)</div>
+	<div class="box s75 l75">hsl(240, 75%, 75%)</div>
+	<div class="box s75 l50">hsl(240, 75%, 50%)</div>
+	<div class="box s75 l25">hsl(240, 75%, 25%)</div>
+	<div class="box s75 l10">hsl(240, 75%, 10%)</div>
+
+	<div class="box s50 l90">hsl(240, 50%, 90%)</div>
+	<div class="box s50 l75">hsl(240, 50%, 75%)</div>
+	<div class="box s50 l50">hsl(240, 50%, 50%)</div>
+	<div class="box s50 l25">hsl(240, 50%, 25%)</div>
+	<div class="box s50 l10">hsl(240, 50%, 10%)</div>
+
+	<div class="box s25 l90">hsl(240, 25%, 90%)</div>
+	<div class="box s25 l75">hsl(240, 25%, 75%)</div>
+	<div class="box s25 l50">hsl(240, 25%, 50%)</div>
+	<div class="box s25 l25">hsl(240, 25%, 25%)</div>
+	<div class="box s25 l10">hsl(240, 25%, 10%)</div>
+
+	<div class="box s0 l90">hsl(240, 0%, 90%)</div>
+	<div class="box s0 l75">hsl(240, 0%, 75%)</div>
+	<div class="box s0 l50">hsl(240, 0%, 50%)</div>
+	<div class="box s0 l25">hsl(240, 0%, 25%)</div>
+	<div class="box s0 l10">hsl(240, 0%, 10%)</div>
+</div>
+
+
+<!-- <p>The Hue Saturation and Lightness model relies on a color wheel. For a great description of how it works, <a href="http://thenewcode.com/61/An-Easy-Guide-To-HSL-Color" title="the new code – An Easy Guide To HSL Color">read Dudley Storey's article on <em>the new code</em></a>.</p> -->
+
+
+<h2 id="hsla">HSLA</h2>
+<p>HSLA is simply the HSL color model with the addition of an alpha 
+channel. This works exactly the same way as the alpha channel in RGBA.</p>
+
+<pre class=" language-css"><code class=" language-css"><span class="token selector">h1 </span><span class="token punctuation">{</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">hsla</span>(240, 25%, 50%, .5)<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<div class="demo">
+	<h1 id="example_of_hsla">Example of HSLA</h1>
+</div>
+<div class="demo ex3">
+	<h1 id="example_of_hsla">Example of HSLA (on different background color)</h1>
+</div>
+
+
+
+
+<h2 id="hex">Hexadecimal Color Values</h2>
+<p><img class="alignright" src="Colors%20in%20CSS_files/hexcode.gif" alt="A digram explaining hex code"></p>
+<p>Probably the most common (yet least intuitive) way to specify colors 
+in CSS is to use their hexadecimal (or hex) values. Hex values are 
+actually just a different way to represent RGB values. Instead of using 
+three numbers between <code>0</code> and <code>255</code>, you use six hexadecimal numbers. Hex numbers can be <code>0-9</code> and <code>A-F</code>. Hex values are always prefixed with a # symbol.</p>
+
+<p>Demonstrated here are some basic CSS rules rules using hex values.</p>
+
+<pre class=" language-css"><code class=" language-css"><span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #000000<span class="token punctuation">;</span> <span class="token punctuation">}</span>     <span class="token comment" spellcheck="true">/* black */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* white */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #aaaaaa<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* medium gray */</span>
+<span class="token selector">ul </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #8050c8<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* purple */</span></code></pre>
+
+
+<h3>Shorthand Notation for Hex Values</h3>
+<p>If both digits of the red, green and blue values are the same, you 
+may use the short three-digit notation. This is best shown by an 
+example:</p>
+
+
+<pre class=" language-css"><code class=" language-css"><span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #000<span class="token punctuation">;</span> <span class="token punctuation">}</span>     <span class="token comment" spellcheck="true">/* black same as #000000 */</span>
+<span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* white same as #ffffff */</span>
+<span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #f00<span class="token punctuation">;</span> <span class="token punctuation">}</span>     <span class="token comment" spellcheck="true">/* red: same as #ff0000 */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #0f0<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* lime: same as #00ff00 */</span>
+<span class="token selector">ul </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> #ff0<span class="token punctuation">;</span> <span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* yellow: same as #ffff00 */</span></code></pre>
+
+
+
+		<p class="backlink"><a href="http://web.simmons.edu/~grovesd/comm244/week3">Back to Week 3 page »</a></p>
+
+
+
+
+</body></html>

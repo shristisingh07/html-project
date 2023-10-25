@@ -1,0 +1,492 @@
+/* 
+ * Styles for notes pages on Comm-244 website
+ * @author			Dane Groves
+ * @lastmodified	20140-09-10
+ */
+/* Fancy Link Styling
+a[rel~="external"]:after {
+   content: "\f08e";	//$fa-external-link: "\f08e";
+	display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome; // shortening font declaration
+   //font-size: inherit; // can't have font-size inherit on line above, so need to override
+	padding-left: 8px;
+	text-rendering: auto; // optimizelegibility throws things off #1094
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+a[rel$="pdf"], a[href$="pdf"]:after {
+	content: "\f1c1";	//$fa-var-file-pdf-o: "\f1c1";
+	display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome; // shortening font declaration
+   //font-size: inherit; // can't have font-size inherit on line above, so need to override
+	padding-left: 8px;
+	text-rendering: auto; // optimizelegibility throws things off #1094
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+
+a[rel$="zip"], a[href$="zip"]:after {
+	content: "\f1c6";	//$fa-file-archive-o: "\f1c6";
+	display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome; // shortening font declaration
+   //font-size: inherit; // can't have font-size inherit on line above, so need to override
+	padding-left: 8px;
+	text-rendering: auto; // optimizelegibility throws things off #1094
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+a[data-type~="video"]:after {
+   content: "\f1c8";	//$fa-file-video-o: "\f1c8";
+	display: inline-block;
+   font: normal normal normal 16px/1 FontAwesome; // shortening font declaration
+   //font-size: inherit; // can't have font-size inherit on line above, so need to override
+	padding-left: 8px;
+	text-rendering: auto; // optimizelegibility throws things off #1094
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+a[href="#top"] { float: right;}
+a[href="#top"]:after {
+   content: "\f0aa";	//$fa-arrow-circle-up: "\f0aa";
+	display: inline-block;
+   font: normal normal normal 16px/1 FontAwesome; // shortening font declaration
+   //font-size: inherit; // can't have font-size inherit on line above, so need to override
+	padding-left: 8px;
+	text-rendering: auto; // optimizelegibility throws things off #1094
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+ */
+/* line 2, sass/_singles.scss */
+.backslash, .forwardslash {
+  font: bold 8em/1.5 Verdana, sans-serif;
+  background-color: white;
+  border: 1px solid #363639;
+  color: black;
+  float: left;
+  margin: 0 10px 50px 0;
+  padding: 0 35px 25px 35px;
+  text-align: center;
+  width: 1em; }
+
+/* For images page */
+/* line 17, sass/_singles.scss */
+.greenbox {
+  background-color: #c8e6c8;
+  border: 1px solid #000;
+  height: 100px;
+  padding: 0 30px; }
+
+/* line 23, sass/_singles.scss */
+.gflogo {
+  border: none;
+  padding: 25px 0 0 25px; }
+
+/* line 27, sass/_singles.scss */
+.gfnote {
+  font-size: 16px;
+  float: right;
+  width: 300px;
+  margin: 25px 0; }
+
+/* For CSS Colors page */
+/* line 36, sass/_singles.scss */
+#css-colors tr td:first-child {
+  height: 35px;
+  width: 75px; }
+
+/* line 37, sass/_singles.scss */
+#css-colors table {
+  float: left;
+  margin: 20px 20px 0 0; }
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, sass/lib/prism/prism.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* line 30, sass/lib/prism/prism.scss */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+/* line 36, sass/lib/prism/prism.scss */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  /* line 43, sass/lib/prism/prism.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none; } }
+
+/* Code blocks */
+/* line 50, sass/lib/prism/prism.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto; }
+
+/* line 56, sass/lib/prism/prism.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0; }
+
+/* Inline code */
+/* line 62, sass/lib/prism/prism.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+/* line 67, sass/lib/prism/prism.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray; }
+
+/* line 74, sass/lib/prism/prism.scss */
+.token.punctuation {
+  color: #999; }
+
+/* line 78, sass/lib/prism/prism.scss */
+.namespace {
+  opacity: .7; }
+
+/* line 82, sass/lib/prism/prism.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905; }
+
+/* line 92, sass/lib/prism/prism.scss */
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690; }
+
+/* line 101, sass/lib/prism/prism.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5); }
+
+/* line 110, sass/lib/prism/prism.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a; }
+
+/* line 116, sass/lib/prism/prism.scss */
+.token.function {
+  color: #DD4A68; }
+
+/* line 120, sass/lib/prism/prism.scss */
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90; }
+
+/* line 126, sass/lib/prism/prism.scss */
+.token.important {
+  font-weight: bold; }
+
+/* line 130, sass/lib/prism/prism.scss */
+.token.entity {
+  cursor: help; }
+
+/* line 22, sass/notes.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #00aeef;
+  text-decoration: none; }
+  /* line 27, sass/notes.scss */
+  a:hover {
+    color: #ec008c; }
+  /* line 31, sass/notes.scss */
+  a:active, a:focus {
+    color: #ec008c;
+    outline: none; }
+
+/* line 38, sass/notes.scss */
+body {
+  background-color: #fcfcfc;
+  color: #363639;
+  font: 1.2em "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  margin: 25px 5% 50px 5%; }
+  @media (min-width: 860px) {
+    /* line 38, sass/notes.scss */
+    body {
+      margin-left: 8%;
+      margin-right: 8%; } }
+  @media (min-width: 1000px) {
+    /* line 38, sass/notes.scss */
+    body {
+      margin-left: 12%;
+      margin-right: 12%; } }
+
+/* line 58, sass/notes.scss */
+h2 {
+  margin: 2.4em 0 .5em 0; }
+
+/* line 59, sass/notes.scss */
+h3 {
+  margin: 2.4em 0 0 0; }
+
+/* line 64, sass/notes.scss */
+p {
+  margin-bottom: 1em; }
+
+/* line 66, sass/notes.scss */
+figure {
+  margin: 0; }
+
+/* line 67, sass/notes.scss */
+figcaption {
+  font-style: italic;
+  font-size: .8em; }
+
+/* line 72, sass/notes.scss */
+img {
+  border: 1px solid #363639;
+  max-width: 100%; }
+
+/* line 79, sass/notes.scss */
+li {
+  margin-bottom: 10px; }
+
+/* line 81, sass/notes.scss */
+dl {
+  padding-left: 40px; }
+
+/* line 82, sass/notes.scss */
+dt {
+  font-weight: bold; }
+
+/* line 83, sass/notes.scss */
+dd {
+  margin-bottom: .5em; }
+
+/* line 85, sass/notes.scss */
+p + ul,
+p + ol {
+  padding-top: 0; }
+
+/* line 90, sass/notes.scss */
+th, td {
+  border: 1px solid black;
+  padding: 2px 5px; }
+
+/* line 91, sass/notes.scss */
+tr td:first-child {
+  font-weight: bold;
+  color: green; }
+
+/* line 93, sass/notes.scss */
+blockquote {
+  border-left: 10px solid #e6e6e6;
+  margin-right: 5em;
+  padding-left: 1em; }
+
+/* line 99, sass/notes.scss */
+code, pre {
+  font: 1em Consolas, "Lucida Console", Monaco, monospace; }
+
+/* line 103, sass/notes.scss */
+pre {
+  background-color: #fff;
+  border: 1px solid #363639;
+  color: black;
+  overflow: auto;
+  padding: 20px; }
+  /* line 110, sass/notes.scss */
+  pre code {
+    background: none; }
+
+/* line 112, sass/notes.scss */
+code {
+  background: rgba(100, 100, 100, 0.1);
+  padding: 2px 0; }
+
+/* line 116, sass/notes.scss */
+code.wrap {
+  white-space: pre-wrap !important; }
+
+/* line 119, sass/notes.scss */
+dfn, .definition {
+  color: #ed1c24;
+  font-weight: bold;
+  letter-spacing: 1px; }
+
+/* line 124, sass/notes.scss */
+mark, .highlight {
+  background-color: #ffcccc;
+  background-color: rgba(235, 255, 8, 0.62);
+  padding: 2px; }
+
+/* line 130, sass/notes.scss */
+mark.blue {
+  background-color: lightBlue; }
+
+/* Assorted Classes */
+/* line 134, sass/notes.scss */
+.noborder {
+  border: none; }
+
+/* line 135, sass/notes.scss */
+.nofloat {
+  float: none; }
+
+/* line 136, sass/notes.scss */
+.addspace {
+  letter-spacing: 5px; }
+
+/* line 137, sass/notes.scss */
+.addmargin {
+  margin-right: 20px; }
+
+/* line 138, sass/notes.scss */
+.alignleft {
+  clear: left;
+  float: left;
+  margin: 10px 10px 10px 0; }
+
+/* line 139, sass/notes.scss */
+.alignright {
+  clear: right;
+  float: right;
+  margin: 10px 0 10px 10px; }
+
+/* line 140, sass/notes.scss */
+.clear {
+  clear: both; }
+
+/* line 142, sass/notes.scss */
+.comment {
+  background-color: inherit;
+  color: #999; }
+
+/* line 143, sass/notes.scss */
+.outline {
+  border: 1px solid red;
+  padding: 4px; }
+
+/* line 145, sass/notes.scss */
+.code-html {
+  background-color: rgba(240, 240, 240, 0.5);
+  color: blue; }
+
+/* line 146, sass/notes.scss */
+.code-attribute-value {
+  background-color: rgba(240, 240, 240, 0.5);
+  color: purple; }
+
+/* line 150, sass/notes.scss */
+.correct {
+  color: #00a651;
+  font-weight: bold; }
+
+/* line 151, sass/notes.scss */
+.incorrect {
+  color: #ed1c24;
+  font-weight: bold; }
+
+/* line 153, sass/notes.scss */
+.soften {
+  color: #b5b5b9; }
+
+/* line 156, sass/notes.scss */
+aside, .aside {
+  background-color: #ffffdc;
+  border: 1px dotted #363639;
+  clear: right;
+  float: right;
+  margin: 10px 0 10px 20px;
+  padding: 10px 15px 0 15px;
+  width: 300px; }
+
+/* line 165, sass/notes.scss */
+aside h3, .aside h3 {
+  margin-top: 0; }
+
+/* line 167, sass/notes.scss */
+.backlink {
+  clear: both;
+  font-size: 14px;
+  padding: 25px 0 50px 0;
+  text-align: right;
+  width: 100%; }
+
+/* line 174, sass/notes.scss */
+.backlink a {
+  padding: 3px;
+  text-decoration: none; }
+
+/* line 175, sass/notes.scss */
+.backlink a:hover {
+  background-color: #ffcccc; }
+
+/* line 178, sass/notes.scss */
+.directory, .directory ul {
+  list-style: none; }
+
+/* line 179, sass/notes.scss */
+.directory ul {
+  margin: 5px 0;
+  border-left: 1px #ccc dashed; }
+
+/* line 180, sass/notes.scss */
+.directory li {
+  margin-bottom: 0; }
+
+/* line 181, sass/notes.scss */
+.directory li img {
+  border: none;
+  float: none;
+  position: relative;
+  margin: 0 5px 0 -25px; }
+
+/*# sourceMappingURL=notes.css.map */
